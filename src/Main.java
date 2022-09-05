@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        PrintIsleap(2020);
+        printIsleap(2020);
         osVersion(1, 2020);
         printCalculateDeliveryDays(95);
     }
@@ -8,8 +8,8 @@ public class Main {
     //task1
 
 
-    public static void PrintIsleap(int year) {
-        if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
+    public static void printIsleap(int year) {
+        if ((year % 400 == 0 || year % 4 == 0) && year % 100 != 0) {
             System.out.println(year + " — високосный год");
         } else {
             System.out.println(year + " — не високосный год");
@@ -28,7 +28,7 @@ public class Main {
         } else if (os == AOS) {
             System.out.print("для iOS по ссылке ");
         } else {
-            System.out.println("что за телефон?");
+            System.out.println("что за телефон? ");
             return;
         }
         if (productionYear < newYear) {
@@ -46,7 +46,8 @@ public class Main {
         int start = 20;
         int step = 40;
         int result = 1; //кол во дней
-        if (distance >= start) {result = (Math.abs((distance - start) / step) + 2);
+        if (distance >= start) {
+            result = (Math.abs((distance - start) / step) + 2);
         }
         System.out.println("Потребуется для доставки дней: " + result);
 
